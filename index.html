@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Embedded JS Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #282c34;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      background: #61dafb;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="heading">Welcome to Embedded JavaScript</h1>
+  <button onclick="changeColor()">Change Text Color</button>
+
+  <script>
+    function changeColor() {
+      const colors = ["#ff4757", "#1e90ff", "#2ed573", "#ffa502", "#eccc68"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.getElementById("heading").style.color = randomColor;
+    }
+
+    console.log("Inline JavaScript is running!");
+  </script>
+
+</body>
+</html>
